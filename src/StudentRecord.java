@@ -1,11 +1,11 @@
 public class StudentRecord {
-    private static int[] scores;
+    public static int[] scores;
 
     public StudentRecord(int[] array)
     {
         scores = array;
     }
-    private static double average(int start, int end) {
+    public static double average(int start, int end) {
         int avg = 0;
         for (int i = start; i < end; i++)
         {
@@ -16,7 +16,7 @@ public class StudentRecord {
         return avg;
     }
 
-    private static boolean hasImproved() {
+    public static boolean hasImproved() {
         boolean improvement = true;
         for (int i = 0; i < scores.length-1; i++) {
             if (scores[i] > scores[i+1])
@@ -31,7 +31,7 @@ public class StudentRecord {
     {
         if(hasImproved())
         {
-            return average(scores.length-1/2, scores.length-1);
+            return average((scores.length-1)/2, scores.length-1);
         }
         else
         {
